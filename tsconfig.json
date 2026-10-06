@@ -1,0 +1,11 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json",
+  "include": ["src/**/*.ts", "src/**/*.vue", "tests/**/*.ts", "vite.config.ts"],
+  "compilerOptions": {
+    "types": ["chrome", "vitest/globals", "node"],
+    "baseUrl": ".",
+    "paths": { "@/*": ["src/*"] },
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true
+  }
+}

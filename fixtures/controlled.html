@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Controlled input fixture</title><style>body{font:16px system-ui;max-width:700px;margin:30px auto}section{padding:18px;border:1px solid #ccc;margin:15px}input{padding:8px;width:90%}</style></head>
+<body>
+  <h1>Controlled-input event fixture</h1>
+  <p>These lightweight examples mimic the event paths used by Vue v-model and React controlled inputs without loading remote frameworks. The displayed model state should update after filling.</p>
+  <section><h2>Vue-style model binding</h2><label>Email <input id="vue" autocomplete="email"></label><p>Model: <output id="vue-model">(empty)</output></p></section>
+  <section><h2>React-style controlled state</h2><label>First name <input id="react" autocomplete="given-name"></label><p>State: <output id="react-state">(empty)</output></p></section>
+  <script>
+    const vue = document.querySelector('#vue'); const vueModel = document.querySelector('#vue-model')
+    vue.addEventListener('input', event => { vueModel.value = event.target.value || '(empty)' })
+    const react = document.querySelector('#react'); const reactState = document.querySelector('#react-state')
+    react.addEventListener('input', event => { const next = event.target.value; reactState.value = next || '(empty)'; react.value = next })
+  </script>
+</body>
+</html>

@@ -1,0 +1,20 @@
+body { min-height: 100vh; }
+.options { max-width: 920px; margin: 0 auto; padding: 28px 18px 56px; display: grid; gap: 18px; }
+.options h1 { margin: 0; font-size: 28px; letter-spacing: -.5px; }
+.options h2 { margin: 0; font-size: 18px; }
+.options h3 { margin: 0; font-size: 15px; }
+.options-header p { margin: 5px 0 0; }
+.profile-layout { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 16px; align-items: start; }
+.profile-list { display: grid; gap: 6px; }
+.profile-list button { text-align: left; width: 100%; overflow-wrap: anywhere; }
+.profile-list button.active { color: #3340ae; border-color: #6c7bf0; background: #f0f1ff; }
+.editor { display: grid; gap: 14px; }
+.control { display: grid; gap: 5px; }
+.mapping { display: grid; gap: 12px; padding: 13px; border: 1px solid #dfe3ec; border-radius: 10px; }
+.mapping-row { display: grid; grid-template-columns: minmax(0, 1fr) 180px auto; gap: 8px; align-items: end; }
+.mapping-error { color: #a3263b; font-size: 12px; }
+.notice { border-left: 3px solid #6674e8; padding-left: 11px; }
+@media (max-width: 650px) {
+  .profile-layout { grid-template-columns: 1fr; }
+  .mapping-row { grid-template-columns: 1fr; }
+}

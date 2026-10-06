@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "My Form Autofill",
+  "description": "Preview and fill common form fields from locally saved profiles.",
+  "version": "1.0.0",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_title": "My Form Autofill",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}
